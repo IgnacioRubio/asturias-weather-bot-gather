@@ -1,2 +1,3 @@
-# asturias-time-bot-gather
-Service to gather information about time in Asturias
+# Asturias Time Bot Gather
+
+Service to gather information about time in Asturias.
