@@ -1,0 +1,30 @@
+{
+  "name": "asturias-weather-bot-gather",
+  "version": "1.0.0",
+  "description": "Service to gather information about weather in Asturias",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgnacioRubio/asturias-weather-bot-gather.git"
+  },
+  "keywords": [
+    "Gather",
+    "Bot",
+    "Schedule"
+  ],
+  "author": "Ignacio Rubio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IgnacioRubio/asturias-weather-bot-gather/issues"
+  },
+  "homepage": "https://github.com/IgnacioRubio/asturias-weather-bot-gather#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "superagent": "^5.2.2",
+    "superagent-charset": "^1.2.0"
+  }
+}
