@@ -24,6 +24,7 @@
   "homepage": "https://github.com/IgnacioRubio/asturias-weather-bot-gather#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "node-schedule": "^1.3.2",
     "superagent": "^5.2.2",
     "superagent-charset": "^1.2.0"
   }
