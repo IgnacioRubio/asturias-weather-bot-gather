@@ -7,7 +7,7 @@ const Email = require('./src/services/email');
 
 
 // municipalities to insert
-const MUN_NAMES = ['Avilés', 'Gijón', 'Oviedo'];
+const MUN_NAMES = ['Avilés', 'Gijón', 'Oviedo', 'Langreo', 'Mieres'];
 
 
 schedule.scheduleJob('0 0 18 * * *', async () => {
