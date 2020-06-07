@@ -17,9 +17,9 @@ exports.getFromAEMET = async () => {
     const URL = `http://opendata.aemet.es/opendata/api/maestro/municipios/?api_key=${AEMET_API_KEY}`;
 
     const res =  await request
-                        .get(URL)
-                        .set('accept', 'text/plain')
-                        .charset('ISO-8859-15');
+      .get(URL)
+      .set('accept', 'text/plain')
+      .charset('ISO-8859-15');
     const municiplaties = JSON.parse(res.text);
 
     return municiplaties;
@@ -70,9 +70,9 @@ exports.createOnDB = async (mun) => {
     };
 
     const res = await request
-                        .post(URL)
-                        .set('Content-Type', 'application/json')
-                        .send(munData);
+      .post(URL)
+      .set('Content-Type', 'application/json')
+      .send(munData);
 
   } catch (err) {
     console.error(err);

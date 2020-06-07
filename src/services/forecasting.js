@@ -59,9 +59,9 @@ exports.createOnDB = async (mun, fcast) => {
     };
 
     const res = await request
-                        .post(URL)
-                        .set('Content-Type', 'application/json')
-                        .send(fcastData);
+      .post(URL)
+      .set('Content-Type', 'application/json')
+      .send(fcastData);
 
   } catch (err) {
     console.error(err);
