@@ -3,6 +3,7 @@ const schedule = require('node-schedule');
 
 const Municipality = require('./src/services/municipality');
 const Forecasting = require('./src/services/forecasting');
+const Email = require('./src/services/email');
 
 
 // municipalities to insert
@@ -56,6 +57,15 @@ schedule.scheduleJob('0 0 18 * * *', async () => {
     console.log('INSERTING FORECASTINGS COMPLETED!');
 
   } catch (err) {
+    // notify error with email
+    msg = {
+      subject: 'ERROR WAS THROW IN ASTURIAS-WEATHER-BOT-GATHER',
+      text: err.toString()
+    };
+
+    Email.send(msg);
+
+    // log error
     console.error(err);
   }
 });
