@@ -31,7 +31,7 @@ async function gather() {
     // check number of municipalities from db's match expected
     let municipalitiesDB =  await Municipality.getFromDB();
 
-    if (MUN_NAMES.length > municipalitiesDB.length) {
+    if (MUN_NAMES.length != municipalitiesDB.length) {
       console.log('INSERTING MUNICIPALITIES INTO DB...');
 
       // municipalities from AEMET
