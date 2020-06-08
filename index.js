@@ -7,7 +7,7 @@ const Email = require('./src/services/email');
 
 
 // municipalities to insert
-const MUN_NAMES = ['Avilés', 'Gijón', 'Oviedo', 'Langreo', 'Mieres'];
+const MUN_NAMES = ['Avilés', 'Gijón', 'Oviedo', 'Siero', 'Langreo'];
 
 
 // FORCE FUNCTION WHEN NEEDED, npm run force
