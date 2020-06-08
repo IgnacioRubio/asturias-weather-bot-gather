@@ -18,7 +18,7 @@ if (process.env.FORCE_RUN) {
 }
 
 
-schedule.scheduleJob('0 0 18 * * *', async () => {
+schedule.scheduleJob('0 0 6 * * *', async () => {
   gather();
 });
 
