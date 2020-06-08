@@ -10,7 +10,20 @@ const Email = require('./src/services/email');
 const MUN_NAMES = ['Avilés', 'Gijón', 'Oviedo', 'Langreo', 'Mieres'];
 
 
+// FORCE FUNCTION WHEN NEEDED, npm run force
+if (process.env.FORCE_RUN) {
+  gather();
+
+  return;
+}
+
+
 schedule.scheduleJob('0 0 18 * * *', async () => {
+  gather();
+});
+
+
+async function gather() {
   try {
     console.log(new Date().toString());
     console.log('Running Asturias Weather Gather');
@@ -24,10 +37,10 @@ schedule.scheduleJob('0 0 18 * * *', async () => {
       // municipalities from AEMET
       const municipalitiesAEMET = await Municipality.getFromAEMET();
 
-      for await (let mun of municipalitiesAEMET) {
-        // delete all records from db
-        await Municipality.deleteAllFromDB();
+      // delete all records from db
+      await Municipality.deleteAllFromDB();
 
+      for await (let mun of municipalitiesAEMET) {
         // create only from MUN_NAMES
         if (MUN_NAMES.indexOf(mun.nombre) > -1) {
           console.log('Inserting mun: ' + mun.nombre);
@@ -68,4 +81,4 @@ schedule.scheduleJob('0 0 18 * * *', async () => {
     // log error
     console.error(err);
   }
-});
+}
