@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node .",
     "force": "env FORCE_RUN=true node .",
+    "pm2": "pm2 start index.js --name awb-gather",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
