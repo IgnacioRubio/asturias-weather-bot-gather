@@ -1,4 +1,6 @@
 require('dotenv').config();
+require('./src/util/env');
+
 const schedule = require('node-schedule');
 
 const Municipality = require('./src/services/municipality');
