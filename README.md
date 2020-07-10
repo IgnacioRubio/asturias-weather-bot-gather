@@ -97,9 +97,9 @@ PM2 is used to make the deployment.
 ## Built with 🛠️
 
 * [NodeJS](https://nodejs.org/en/) - JavaScript runtime
-* [Express](https://maven.apache.org/) - Web application framework
-* [nodemailer](https://maven.apache.org/) - Easy as cake e-mail sending
-* [node-schedule](https://maven.apache.org/) - A cron-like and not-cron-like job scheduler
+* [Express](https://expressjs.com/) - Web application framework
+* [nodemailer](https://www.npmjs.com/package/nodemailer) - Easy as cake e-mail sending
+* [node-schedule](https://www.npmjs.com/package/node-schedule) - A cron-like and not-cron-like job scheduler
 * [dotenv](https://www.npmjs.com/package/dotenv) - Storing configuration in the environment 
 
 ## License
