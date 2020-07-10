@@ -66,23 +66,17 @@ npm start
 ### What's included 📂
 
 ```
-asturias-weather-bot-api
+asturias-weather-bot-gather
+├── index.js
 ├── LICENSE
 ├── package.json
 ├── package-lock.json
 ├── README.md
-├── server.js
 └── src
-    ├── forecastings
-    │   ├── forecastings.controller.js
-    │   ├── forecastings.model.js
-    │   └── forecastings.route.js
-    ├── municipalities
-    │   ├── municipalities.controller.js
-    │   ├── municipalities.model.js
-    │   └── municipalities.route.js
     ├── services
-    │   └── email.js
+    │   ├── email.js
+    │   ├── forecasting.js
+    │   └── municipality.js
     └── util
         └── env.js
 ```
