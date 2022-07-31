@@ -8,11 +8,14 @@ exports.send = async (msg) => {
     let transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: process.env.EMAIL_PORT,
-      secure: true,
+      secureConnection: false,
       auth: {
         user: process.env.EMAIL_AUTH_USER,
         pass: process.env.EMAIL_AUTH_PASS
       },
+      tls: {
+        ciphers: 'SSLv3'
+      }
     });
   
     // send mail with defined transport object
