@@ -5,7 +5,7 @@ const schedule = require('node-schedule');
 
 const Municipality = require('./src/services/municipality');
 const Forecasting = require('./src/services/forecasting');
-const Email = require('./src/services/email');
+// const Email = require('./src/services/email');
 
 
 // municipalities to insert
@@ -61,13 +61,13 @@ async function gather() {
     console.log('INSERTING FORECASTINGS INTO DB...');
     // create new forecastings
     for await (let munDB of municipalitiesDB) {
+      console.log('Inserting mun: ' + munDB.name);
+      
       // forecasting from AEMET
       const forecast = await Forecasting.getDailyByMunicipalityFromAEMET(munDB.code);
 
       // store new forecasting
       await Forecasting.createOnDB(munDB, forecast[0].prediccion.dia[1]);
-
-      console.log('Inserting mun: ' + munDB.name);
     }
     console.log('INSERTING FORECASTINGS COMPLETED!');
 
@@ -78,7 +78,7 @@ async function gather() {
       text: err.toString()
     };
 
-    Email.send(msg);
+    // Email.send(msg);
 
     // log error
     console.error(err);
